@@ -3,23 +3,23 @@
 $groceries = [
     [
         "name" => "Rijst",
-        "price" => 1.99,
-        "amount" => 3
+        "amount" => 3,
+        "price" => 1.99
     ],
     [
         "name" => "Broccoli",
-        "price" => 2.53,
-        "amount" => 5
+        "amount" => 5,
+        "price" => 2.53
     ],
     [
         "name" => "Koekjes",
-        "price" => 1.55,
-        "amount" => 2
+        "amount" => 2,
+        "price" => 1.55
     ],
     [
         "name" => "Noten",
-        "price" => 0.96,
-        "amount" => 1
+        "amount" => 1,
+        "price" => 0.96
     ]
 ];
 
