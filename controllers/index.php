@@ -34,4 +34,4 @@ $subtotal_price = function ($grocery) {
 
 $total_price = number_format(array_reduce($groceries, "sum_groceries"), 2);
 
-require "index.view.php";
+require "./views/index.view.php";
