@@ -7,13 +7,13 @@
     <title>Boodschappenlijst</title>
 </head>
 <body>
-    <table>
+    <table id="table">
         <thead>
             <tr>
-                <th style="text-align: left;">Product</th>
-                <th style="text-align: left;">Prijs</th>
-                <th style="text-align: left;">Hoeveelheid</th>
-                <th style="text-align: left;">Subtotaal</th>
+                <th>Product</th>
+                <th>Prijs</th>
+                <th>Hoeveelheid</th>
+                <th>Subtotaal</th>
             </tr>
         </thead>
         <tbody>
@@ -28,7 +28,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="3" style="text-align: left;">Totaal</th>
+                <th colspan="3">Totaal</th>
                 <td class="price"><?= $total_price ?></td>
             </tr>
         </tfoot>
