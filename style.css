@@ -22,3 +22,7 @@ input {
 .price {
     text-align: right;
 }
+
+.bold {
+    font-weight: bold;
+}
