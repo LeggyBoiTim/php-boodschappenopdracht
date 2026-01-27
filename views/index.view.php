@@ -1,5 +1,4 @@
 <?php require("partials/header.php") ?>
-
 <?php require("partials/nav.php") ?>
 
 <h1>Overzicht</h1>
@@ -17,7 +16,7 @@
             <tr>
                 <td><?= $grocery["name"] ?></td>
                 <td class="price"><?= $grocery["price"] ?></td>
-                <td><input type="number" min="0" step="1" value="<?= $grocery["amount"] ?>"></td>
+                <td><input type="number" min="0" step="1" value="<?= $grocery["quantity"] ?>"></td>
                 <td class="price"><?= $subtotal_price($grocery) ?></td>
             </tr>
         <?php endforeach; ?>

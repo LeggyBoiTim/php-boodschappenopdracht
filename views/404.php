@@ -1,5 +1,4 @@
 <?php require("partials/header.php") ?>
-
 <?php require("partials/nav.php") ?>
 
 <h1>Pagina niet gevonden.</h1>
