@@ -1,7 +1,5 @@
 <?php
 
-require("functions.php");
-
 $groceries = [
     [
         "name" => "Rijst",
