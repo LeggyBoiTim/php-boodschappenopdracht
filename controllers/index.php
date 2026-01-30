@@ -3,13 +3,11 @@
 require "Database.php";
 
 $config = require("config.php");
-
 $db = new Database($config["database"]);
 $groceries = $db->query("SELECT * FROM groceries")->fetchAll();
 
 function sum_groceries($carry, $grocery) {
-    $carry += $grocery["price"] * $grocery["quantity"];
-    return $carry;
+    return $carry += $grocery["price"] * $grocery["quantity"];
 }
 
 $subtotal_price = function ($grocery) {
