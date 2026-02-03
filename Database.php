@@ -10,9 +10,9 @@ class Database {
         ]);
     }
 
-    public function query($query) {
+    public function query($query, $data = null) {
         $statement = $this->connection->prepare($query);
-        $statement->execute();
+        $statement->execute($data);
         return $statement;
     }
 }

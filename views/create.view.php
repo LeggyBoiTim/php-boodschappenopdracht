@@ -3,8 +3,8 @@
 
 <h1>Product Toevoegen</h1>
 <form method="POST">
-    <label for="item">Naam: </label>
-    <input id="item" name="item" type="text" placeholder="Bijvoorbeeld: Melk" required><br><br>
+    <label for="name">Naam: </label>
+    <input id="name" name="name" type="text" placeholder="Bijvoorbeeld: Melk" required><br><br>
     <label for="quantity">Aantal: </label>
     <input id="quantity" name="quantity" type="number" type="number" min="0" step="1" value=0 required><br><br>
     <label for="price">Prijs: </label>
