@@ -23,6 +23,11 @@ input {
     text-align: right;
 }
 
+.error {
+    color: red;
+    font-weight: bold;
+}
+
 .bold {
     font-weight: bold;
 }

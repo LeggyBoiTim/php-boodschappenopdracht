@@ -14,9 +14,9 @@
     <tbody>
         <?php foreach ($groceries as $grocery) : ?>
             <tr>
-                <td><?= $grocery["name"] ?></td>
-                <td class="price"><?= $grocery["price"] ?></td>
-                <td><input type="number" min="0" step="1" value="<?= $grocery["quantity"] ?>"></td>
+                <td><?= htmlspecialchars($grocery["name"]) ?></td>
+                <td class="price"><?= htmlspecialchars($grocery["price"]) ?></td>
+                <td><input type="number" min="0" step="1" value="<?= htmlspecialchars($grocery["quantity"]) ?>"></td>
                 <td class="price"><?= $subtotal_price($grocery) ?></td>
             </tr>
         <?php endforeach; ?>
