@@ -15,16 +15,16 @@
         <?php foreach ($groceries as $grocery) : ?>
             <tr>
                 <td><?= $grocery["name"] ?></td>
-                <td class="price"><?= $grocery["price"] ?></td>
+                <td class="price"><?= number_format((float) $grocery["price"], 2) ?></td>
                 <td><input type="number" min="0" step="1" value="<?= $grocery["quantity"] ?>"></td>
-                <td class="price"><?= $subtotal_price($grocery) ?></td>
+                <td class="price"><?= number_format((float) $subtotal_price($grocery), 2) ?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
     <tfoot>
         <tr>
             <th colspan="3">Totaal</th>
-            <td class="price"><?= $total_price ?></td>
+            <td class="price"><?= number_format((float) $total_price, 2) ?></td>
         </tr>
     </tfoot>
 </table>

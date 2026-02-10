@@ -1,6 +1,7 @@
 <?php
 
 require "Database.php";
+require "Validator.php";
 
 $config = require("config.php");
 $db = new Database($config["database"]);
@@ -8,13 +9,13 @@ $db = new Database($config["database"]);
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = [];
 
-    if (empty($_POST["name"])) {
-        $errors["name"] = "Het product heeft een naam nodig.";
+    if (!Validator::string($_POST["name"], 1, 50)) {
+        $errors["name"] = "Het product heeft een naam nodig met een maximum van 50 letters.";
     }
-    if (empty($_POST["quantity"]) || $_POST["quantity"] < 1) {
+    if (!Validator::integer($_POST["quantity"], 1)) {
         $errors["quantity"] = "Het product heeft een aantal van 1 of hoger nodig.";
     }
-    if ($_POST["price"] < 0.00) {
+    if (!Validator::decimal($_POST["price"], 0.0)) {
         $errors["price"] = "Het product heeft een prijs van 0.00 of hoger nodig.";
     }
 
